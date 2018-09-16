@@ -1,0 +1,8 @@
+<div class="new-message-wrapper d-flex">
+  <div class="input-group">
+    <input [(ngModel)]="newMessageText" type="text" class="form-control" placeholder="Enter a new message" (keyup.enter)="submit(newMessage.value)" #newMessage>
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" (click)="submit(newMessage.value)">Enter</button>
+    </div>
+  </div>
+</div>

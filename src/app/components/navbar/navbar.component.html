@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+  <div class="container">
+    <span class="navbar-brand">ChatApp</span>
+    <div class="page-links">
+      <ul class="navbar-nav" *ngIf="currentUser else loggedOut">
+        <li class="nav-item">
+          <a [routerLink]="'/profile/' + currentUser.id" routerLinkActive="active" class="nav-link">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/chat" routerLinkActive="active" class="nav-link">Chat Rooms</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="auth.logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ng-template #loggedOut>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/signup" routerLinkActive="active" class="nav-link">Sign Up</a>
+      </li>
+    </ul>
+</ng-template>

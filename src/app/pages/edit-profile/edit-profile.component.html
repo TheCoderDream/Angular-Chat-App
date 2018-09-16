@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-8 col-md-6" *ngIf="currentUser else noPhoto">
+      <img *ngIf="!downloadUrl" [src]="currentUser.photoUrl" alt="profile-pic" class="rounded-circle mx-auto d-block profile-pic">
+      <img *ngIf="downloadUrl && downloadUrl.length > 0" [src]="downloadUrl" alt="profile-pic" class="rounded-circle mx-auto d-block profile-pic">
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="currentUser">
+    <div class="col-xs-12 col-sm-8 col-md-6">
+      <input type="file" (change)="uploadFile($event)">
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="currentUser">
+    <div class="col-xs-12 col-sm-8 col-md-6 justify-content-center d-flex">
+      <input type="text" [(ngModel)]="currentUser.firstName">
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="currentUser">
+    <div class="col-xs-12 col-sm-8 col-md-6 justify-content-center d-flex">
+      <input type="text" [(ngModel)]="currentUser.lastName">
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="currentUser">
+    <div class="col-xs-12 col-sm-8 col-md-6 quote">
+      <input type="text" [(ngModel)]="currentUser.quote">
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="currentUser">
+    <div class="col-xs-12 col-sm-8 col-md-6 text-center bio">
+      <textarea rows="5" [(ngModel)]="currentUser.bio"></textarea>
+    </div>
+  </div>
+  <div class="row justify-content-center" *ngIf="currentUser">
+    <div class="col-xs-12 col-sm-8 col-md-6 text-center">
+      <button class="btn btn-primary" (click)="save()">Save Profile</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #noPhoto>
+  <div class="no-photo d-flex justify-content-center align-items-center">
+    No Photo
+  </div>
+</ng-template>
