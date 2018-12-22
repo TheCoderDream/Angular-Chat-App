@@ -1,8 +1,9 @@
+![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_30.png)
+![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_31.png)
 ![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_27.png)
 ![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_28.png)
 ![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_24.png)
 ![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_25.png)
-![alt-text](https://github.com/TheCodersDream/Angular-Chat-App/blob/master/Screenshot_26.png)
 # Chat
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
